@@ -1,0 +1,293 @@
+@font-face {
+    font-family: Moon-Regular;
+    src: url(../fonts/Moon2.0-Regular.otf);
+}
+
+@font-face {
+    font-family: Moon-Light;
+    font-weight: lighter;
+    src: url(../fonts/Moon2.0-Light.otf);
+}
+@font-face {
+    font-family: Moon-Bold;
+    font-weight: bold;
+    src: url(../fonts/Moon2.0-Bold.otf);
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Quicksand", sans-serif;
+}
+
+h1, h2, h3, span {
+  font-family: Moon-Regular, sans-serif;
+}
+
+p {
+  line-height: 1.8em;
+}
+
+.container {
+  min-height: 100%;
+  width: 100%;
+  background-image: url(../images/main-image.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: 0;
+  top: 0;
+  transition: all .2s;
+}
+
+.navbar {
+  width: 100%;
+  position: relative;
+  font-family: Moon-Regular, sans-serif;
+  background-color: rgba(255, 255, 255, .8);
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 16px;
+  }
+
+  .navbar {
+    height: auto;
+    display: block;
+    text-align: center
+  }
+
+  .navbar > ul {
+    margin-top: 2rem;
+    width: 100%;
+    justify-content: space-around;
+    align-content: center;
+    outline: 1px solid rgba(0, 0, 0, .6);
+    outline-offset: 1em;
+  }
+
+  .content-grid-element {
+    margin: 0 0 1rem 0;
+    width: auto;
+  }
+
+  .credits {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .navbar {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar h1 {
+    margin: 0 2rem;
+  }
+
+  .navbar ul li {
+    margin-right: 2rem;
+    outline: 1px solid transparent;
+    outline-offset: .5em;
+  }
+
+  .navbar ul li:hover {
+    color: #000;
+    outline: 1px solid #000;
+  }
+
+  .content-container {
+    display: flex;
+  }
+
+  .content-grid-element {
+    flex: 1 0;
+    margin: 0 1rem 1rem 0;
+  }
+
+  .content-grid-element-reg {
+    flex-basis: 45%;
+  }
+
+  .content-grid-element-small {
+    flex-basis: 20%;
+  }
+}
+
+.navbar h1 {
+    font-family: Moon-Light, sans-serif;
+    font-size: 2em;
+    margin: 0 2rem;
+    cursor: pointer;
+}
+
+.navbar ul {
+    display: inline-flex;
+    list-style: none;
+    color: #666;
+    padding: 0;
+}
+
+.navbar ul li {
+    font-size: 1em;
+    transition: .4s ease-in-out;
+    cursor: pointer;
+}
+
+footer {
+  height: 30px;
+  width: 100%;
+  bottom: 0;
+  font-family: Moon-Regular, sans-serif;
+  position: fixed;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer p, footer img {
+    font-size: .8em;
+    color: #fff;
+    text-shadow: 0 0 .2px #000;
+    margin: auto 2rem 1rem 2rem;
+    cursor: pointer;
+}
+
+.four-o-four {
+  font-family: Moon-Regular, sans-serif;
+  font-size: 60px;
+  color: pink;
+  text-align: center;
+}
+
+#content {
+    padding: 2%;
+    display: block;
+}
+
+.snake-container {
+    width: fit-content;
+    flex-direction: column;
+}
+
+.content-grid {
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.content-container {
+  margin: auto;
+}
+
+#snake {
+  border: 1px solid #000;
+}
+
+.button {
+  min-width: 10em;
+  box-shadow: 0.25px 0.5px 2px 0.5px rgba(0, 0, 0, 0.6);
+  margin: 1em;
+  display: flex;
+  justify-content: center;
+  outline: 1px solid #000;
+  padding: .6em;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+  color: #000;
+  text-decoration: none;
+}
+
+.button-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.button-small {
+  width: fit-content;
+}
+
+.button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.credits {
+    font-size: .6em;
+    color: #d1d1d1;
+}
+
+.contact-method {
+  display: block;
+  text-align: center;
+  background-color: rgba(255, 255, 255, .8);
+}
+
+.contact-method .widget {
+  margin: 0;
+  padding-bottom: 1em;
+  transition: all .2s ease-in-out;
+}
+
+div[ub-in-page] {
+  margin: 1em;
+}
+
+a.email-link {
+  color: grey;
+}
+
+.content-grid-element {
+  background-color: rgba(255, 255, 255, .8);
+  box-shadow: 0.25px 0.5px 2px 0.5px rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+}
+
+.content-grid-element > h2 {
+  margin-top: 0;
+}
+
+.self-portrait img {
+  width: 100%;
+}
+
+
+.icon {
+  width: 32px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all .1s ease-in-out;
+}
+
+.github-icon {
+  background-image: url(../images/github.png);
+}
+
+.button:hover .github-icon {
+  background-image: url(../images/github-light.png);
+}
+
+.medium-icon {
+  background-image: url(../images/medium.svg);
+}
+
+.button:hover .medium-icon {
+  background-image: url(../images/medium-light.svg);
+}
+
+.linkedin-icon {
+  background-image: url(../images/linkedin.png);
+}
+
+.button:hover .linkedin-icon {
+  background-image: url(../images/linkedin-light.png);
+}
+#change-background {
+  max-height: 2em;
+}
